@@ -7,4 +7,6 @@ class User(AbstractUser):
 
 
 class Note(models.Model):
-    text = models.CharField(max_length=30)
+    author = models.ForeignKey(User, verbose_name="Автор", on_delete=models.PROTECT, null=True)
+    text = models.TextField(verbose_name="Текст", null=True)
+    image = models.ImageField(upload_to="upload_image/", null=True)

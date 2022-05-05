@@ -1,18 +1,11 @@
 from django.urls import path
 
-# from goals.views import category, goal, comment
-#
-#
-# urlpatterns = [
-#     path("goal_category/create", category.GoalCategoryCreateView.as_view()),
-#     path("goal_category/list", category.GoalCategoryListView.as_view()),
-#     path("goal_category/<pk>", category.GoalCategoryView.as_view()),
-#
-#     path("goal/create", goal.GoalCreateView.as_view()),
-#     path("goal/list", goal.GoalListView.as_view()),
-#     path("goal/<pk>", goal.GoalView.as_view()),
-#
-#     path("goal_comment/create", comment.CommentCreateView.as_view()),
-#     path("goal_comment/list", comment.CommentListView.as_view()),
-#     path("goal_comment/<pk>", comment.CommentView.as_view()),
-# ]
+from note import views
+
+urlpatterns = [
+    path("create/", views.NoteCreateView.as_view()),
+    path("", views.NoteListView.as_view()),
+    path("<int:pk>/", views.NoteView.as_view()),
+    path('<int:pk>/upload_image/', views.AdImageView.as_view()),
+
+]
