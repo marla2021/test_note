@@ -19,7 +19,6 @@
             <li>Заметки добавляла через djangoadmin, для этого создала superuser.</li>
             <li>Вот его данные: username - mar.la, password - 123.</li>
             <li>Также все посмотрела в Postman.</li>
-            <li>Прописала urls.</li>
         </ul></p>
  <h5 align="center">Спасибо за уделенное внимание!<h5>  
  </body>
